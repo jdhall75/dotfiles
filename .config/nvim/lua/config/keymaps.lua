@@ -32,3 +32,9 @@ vim.keymap.set('n', "<leader>bw", ":bw<cr>", {desc="Wipe out current buffer."})
 
 -- Oil
 vim.keymap.set('n', "<leader>o", ":Oil<cr>", {desc="Launch OIL file manager", silent=true})
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Telescope search files' })
+vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Telescope help tags' })

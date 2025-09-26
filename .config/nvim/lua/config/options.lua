@@ -39,3 +39,6 @@ vim.o.wildmenu = true
 vim.o.signcolumn  = "yes"
 
 vim.o.winborder = "rounded"
+
+-- mouse
+vim.o.mouse = ''

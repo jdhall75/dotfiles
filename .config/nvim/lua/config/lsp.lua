@@ -2,6 +2,7 @@ vim.lsp.enable("pyright")
 vim.lsp.enable("ruff")
 -- vim.lsp.enable("vimls")
 vim.lsp.enable("lua_ls")
+vim.lsp.enable("ts_server")
 
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup('lsp_config_group', { clear = true }),

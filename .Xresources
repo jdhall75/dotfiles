@@ -1,0 +1,41 @@
+Xft*dpi:                        200
+URxvt*termName:                 rxvt-256color
+URxvt*font:                     xft:VictorMono NF:pixelsize=17:antialias=true:hinting=true,\
+                                xft:VictorMono NF:pixelsize=6:antialias=true:hinting=true,\
+                                xft:Unifont:pixelsize:10,\
+                                -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.depth:                    32
+URxvt*lineSpace:                0
+URxvt.letterSpace:              2
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
+URxvt*geometry:                 80x17
+URxvt.scrollBar:                false
+URxvt*loginShell:               true
+URxvt.internalBorder:           26
+URxvt.perl-ext-common:          default,clipboard
+URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+URxvt.clipboard.autocopy:       true
+URxvt*background:	rgba:0000/0000/0200/dc90
+
+*background:   #000000
+*foreground:   #eff0eb
+*cursorColor:  #9aedfe
+
+*color0:      #33303b
+*color8:      #4f4b58
+*color1:      #ff5c57
+*color9:      #ff5c57
+*color2:      #5af78e
+*color10:     #5af78e
+*color3:      #f3f99d
+*color11:     #f3f99d
+*color4:      #57c7ff
+*color12:     #57c7ff
+*color5:      #ff6ac1
+*color13:     #ff6ac1
+*color6:      #9aedfe
+*color14:     #9aedfe
+*color7:      #eff0eb
+*color15:     #eff0eb

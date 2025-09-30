@@ -130,7 +130,20 @@ if [ -d "/opt/nodejs" ]; then
     export PATH=/opt/nodejs/bin:$PATH
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+if [ -d "$HOME/.fzf" ]; then
+    echo "In FZF"
+    export FZF_HOME="/home/jhall/.fzf"
+    case ":$PATH:" in
+      *":$FZF_HOME:"*) ;;
+      *) export PATH="$FZF_HOME/bin:$PATH" ;;
+    esac
+    if [ ! -f ~/.fzf.bash ]; then
+        fzf --bash > ~/.fzf.bash
+    fi
+    . ~/.fzf.bash
+fi
+        
+
 
 # pnpm
 export PNPM_HOME="/home/jhall/.local/share/pnpm"

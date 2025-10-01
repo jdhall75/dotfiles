@@ -11,7 +11,7 @@
 --- @field custom_subdir string?
 
 vim.api.nvim_create_autocmd('BufWritePre',{
-  group = "GoLspGroup",
+  group = vim.api.nvim_create_augroup("GoLspGroup", {clear=true}),
   pattern = "*.go",
   callback = function()
     local params = vim.lsp.util.make_range_params()

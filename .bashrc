@@ -131,7 +131,6 @@ if [ -d "/opt/nodejs" ]; then
 fi
 
 if [ -d "$HOME/.fzf" ]; then
-    echo "In FZF"
     export FZF_HOME="/home/jhall/.fzf"
     case ":$PATH:" in
       *":$FZF_HOME:"*) ;;
@@ -143,7 +142,21 @@ if [ -d "$HOME/.fzf" ]; then
     . ~/.fzf.bash
 fi
         
+if [ -d "/opt/go" ]; then
+    export GOROOT=/opt/go
+    case ":$PATH:" in
+      *":$GOROOT/bin:"*) ;;
+      *) export PATH="$GOROOT/bin:$PATH" ;;
+    esac
+fi
 
+# node
+export NODE_HOME="/opt/node/bin"
+case ":$PATH:" in
+  *":$NODE_HOME:"*) ;;
+  *) export PATH="$NODE_HOME:$PATH" ;;
+esac
+# pnpm end
 
 # pnpm
 export PNPM_HOME="/home/jhall/.local/share/pnpm"

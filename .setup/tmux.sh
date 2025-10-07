@@ -24,3 +24,13 @@ sh autogen.sh \
 cd
 
 rm -fr $BUILD_DIR
+
+OMT_HOME=$HOME/.oh-my-tmux
+if [ ! -d $OMT_HOME ]; then
+    git clone --single-branch https://github.com/gpakosz/.tmux.git $OMT_HOME
+fi
+if [ ! -d $HOME/.config/tmux ]; then
+    mkdir -p ~/.config/tmux
+    ln -s $OMT_HOME/.tmux.conf ~/.config/tmux/tmux.conf
+fi
+

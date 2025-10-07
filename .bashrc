@@ -176,5 +176,7 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     source "$HOME/.bash-git-prompt/gitprompt.sh"
 fi
 
+export UV_NATIVE_TLS=true
+
 # store env creds out out of source control
 [ -f "$HOME/.credentials" ] && source $HOME/.credentials

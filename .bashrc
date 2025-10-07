@@ -32,6 +32,8 @@ shopt -s checkwinsize
 
 XDG_CONFIG_HOME=$HOME/.config
 
+EDITOR=vim
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 

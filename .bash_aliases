@@ -22,7 +22,7 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias php="docker run -it --rm -v \$PWD:/project -p 8000:8000 -w /project php"
+# alias php="docker run -it --rm -v \$PWD:/project -p 8000:8000 -w /project php"
 alias dr-python="docker run -it --rm -v \$PWD:/project -w /project python:3-alpine"
 alias alpaca-run="docker run -it --rm -v \$PWD:/project -w /project makerjd:alpaca"
 alias nr="docker run -it --rm -v \$PWD:/project -w /project node:20-buster"

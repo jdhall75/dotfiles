@@ -32,7 +32,7 @@ shopt -s checkwinsize
 
 XDG_CONFIG_HOME=$HOME/.config
 
-EDITOR=vim
+EDITOR=/home/jhall/.local/bin/nvim
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -159,6 +159,14 @@ export NODE_HOME="/opt/node/bin"
 case ":$PATH:" in
   *":$NODE_HOME:"*) ;;
   *) export PATH="$NODE_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# tmux
+export TMUX_HOME="/opt/tmux/bin"
+case ":$PATH:" in
+  *":$TMUX_HOME:"*) ;;
+  *) export PATH="$TMUX_HOME:$PATH" ;;
 esac
 # pnpm end
 

@@ -178,6 +178,14 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+
+# zig
+export ZIG_HOME="/opt/zig"
+case ":$PATH:" in
+  *":$ZIG_HOME:"*) ;;
+  *) export PATH="$ZIG_HOME:$PATH" ;;
+esac
+
 # bash-git-prompt
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1

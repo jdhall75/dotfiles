@@ -26,29 +26,13 @@ return {
       },
     },
   },
-  on_attach = function(client, bufnr)
-    -- vim.api.nvim_buf_create_user_command(bufnr, 'LspPyrightOrganizeImports', function()
-    --   client:exec_cmd({
-    --     command = 'pyright.organizeimports',
-    --     arguments = { vim.uri_from_bufnr(bufnr) },
-    --   })
-    -- end, {
-    --   desc = 'Organize Imports',
-    -- })
-
-    vim.api.nvim_buf_create_user_command(bufnr, 'LspPyrightSetPythonPath', set_python_path, {
-      desc = 'Reconfigure pyright with the provided python path',
-      nargs = 1,
-      complete = 'file',
-    })
-
-    vim.api.nvim_create_autocmd("LspAttach",{
-        callback = function(args)
-            vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- Go to definition
-            vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)       -- Hover info
-        end
-    })
-
-
-  end,
+  -- on_attach = function(client, bufnr)
+  --   vim.api.nvim_create_autocmd("LspAttach",{
+  --       callback = function(args)
+  --           vim.keymap.set("n", "K", vim.lsp.buf.hover, args)       -- Hover info
+  --       end
+  --   })
+  --
+  --
+  -- end,
 }

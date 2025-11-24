@@ -196,3 +196,10 @@ export UV_NATIVE_TLS=true
 
 # store env creds out out of source control
 [ -f "$HOME/.credentials" ] && source $HOME/.credentials
+
+alias dr="docker run -it --rm -v \$PWD:/project ccf-ansible:stable"
+###### Aliases for Ansible ######
+alias ansible-playbook="docker run -it --rm -v \$PWD:/project ccf-ansible:stable ansible-playbook"
+alias ansible-inventory="docker run -it --rm -v \$PWD:/project ccf-ansible:stable ansible-inventory"
+alias ansible="docker run -it --rm -v \$PWD:/project ccf-ansible:stable ansible"
+

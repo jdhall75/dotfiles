@@ -16,6 +16,7 @@ return {
       -- Using Ruff's import organizer
       -- Whether to enable build-on-save diagnostics (true by default)
       enable_build_on_save = true,
+      build_on_save_step = "check",
       -- Path to the Zig executable if ZLS can't find it
       -- zig_exe_path = '/path/to/your/zig_executable',
       -- Other ZLS-specific settings can be added here
@@ -26,13 +27,14 @@ return {
       },
     },
   },
-  -- on_attach = function(client, bufnr)
-  --   vim.api.nvim_create_autocmd("LspAttach",{
-  --       callback = function(args)
-  --           vim.keymap.set("n", "K", vim.lsp.buf.hover, args)       -- Hover info
-  --       end
-  --   })
-  --
-  --
-  -- end,
+  on_attach = function(client, bufnr)
+
+    vim.api.nvim_create_autocmd("BufWritePre",{
+        callback = function()
+            vim.lsp.buf.format({ async = false })
+        end
+    })
+
+
+  end,
 }

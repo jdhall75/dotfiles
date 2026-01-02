@@ -39,3 +39,9 @@ vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+-- Pane navigation
+vim.keymap.set('n', "<C-j>", "<C-w>j", { desc="Move down a pane"})
+vim.keymap.set('n', "<C-k>", "<C-w>k", { desc="Move up a pane"})
+vim.keymap.set('n', "<C-h>", "<C-w>h", { desc="Move left a pane"})
+vim.keymap.set('n', "<C-l>", "<C-w>l", { desc="Move right a pane"})
